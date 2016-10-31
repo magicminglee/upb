@@ -123,7 +123,7 @@ namespace json {
 class MyEnum : public ::upb::reffed_ptr<const ::upb::EnumDef> {
  public:
   MyEnum(const ::upb::EnumDef* e, const void *ref_donor = NULL)
-      : reffed_ptr(e, ref_donor) {
+	  : ::upb::reffed_ptr<const ::upb::EnumDef>(e, ref_donor) {
     UPB_ASSERT(upbdefs_upb_test_json_MyEnum_is(e));
   }
   static MyEnum get() {
@@ -135,7 +135,7 @@ class MyEnum : public ::upb::reffed_ptr<const ::upb::EnumDef> {
 class SubMessage : public ::upb::reffed_ptr<const ::upb::MessageDef> {
  public:
   SubMessage(const ::upb::MessageDef* m, const void *ref_donor = NULL)
-      : reffed_ptr(m, ref_donor) {
+	  : ::upb::reffed_ptr<const ::upb::MessageDef>(m, ref_donor) {
     UPB_ASSERT(upbdefs_upb_test_json_SubMessage_is(m));
   }
 
@@ -148,7 +148,7 @@ class SubMessage : public ::upb::reffed_ptr<const ::upb::MessageDef> {
 class TestMessage : public ::upb::reffed_ptr<const ::upb::MessageDef> {
  public:
   TestMessage(const ::upb::MessageDef* m, const void *ref_donor = NULL)
-      : reffed_ptr(m, ref_donor) {
+	  : ::upb::reffed_ptr<const ::upb::MessageDef>(m, ref_donor) {
     UPB_ASSERT(upbdefs_upb_test_json_TestMessage_is(m));
   }
 
@@ -160,7 +160,7 @@ class TestMessage : public ::upb::reffed_ptr<const ::upb::MessageDef> {
   class MapBoolStringEntry : public ::upb::reffed_ptr<const ::upb::MessageDef> {
    public:
     MapBoolStringEntry(const ::upb::MessageDef* m, const void *ref_donor = NULL)
-        : reffed_ptr(m, ref_donor) {
+		: ::upb::reffed_ptr<const ::upb::MessageDef>(m, ref_donor) {
       UPB_ASSERT(upbdefs_upb_test_json_TestMessage_MapBoolStringEntry_is(m));
     }
 
@@ -173,7 +173,7 @@ class TestMessage : public ::upb::reffed_ptr<const ::upb::MessageDef> {
   class MapInt32StringEntry : public ::upb::reffed_ptr<const ::upb::MessageDef> {
    public:
     MapInt32StringEntry(const ::upb::MessageDef* m, const void *ref_donor = NULL)
-        : reffed_ptr(m, ref_donor) {
+		: ::upb::reffed_ptr<const ::upb::MessageDef>(m, ref_donor) {
       UPB_ASSERT(upbdefs_upb_test_json_TestMessage_MapInt32StringEntry_is(m));
     }
 
@@ -186,7 +186,7 @@ class TestMessage : public ::upb::reffed_ptr<const ::upb::MessageDef> {
   class MapStringBoolEntry : public ::upb::reffed_ptr<const ::upb::MessageDef> {
    public:
     MapStringBoolEntry(const ::upb::MessageDef* m, const void *ref_donor = NULL)
-        : reffed_ptr(m, ref_donor) {
+		: ::upb::reffed_ptr<const ::upb::MessageDef>(m, ref_donor) {
       UPB_ASSERT(upbdefs_upb_test_json_TestMessage_MapStringBoolEntry_is(m));
     }
 
@@ -199,7 +199,7 @@ class TestMessage : public ::upb::reffed_ptr<const ::upb::MessageDef> {
   class MapStringInt32Entry : public ::upb::reffed_ptr<const ::upb::MessageDef> {
    public:
     MapStringInt32Entry(const ::upb::MessageDef* m, const void *ref_donor = NULL)
-        : reffed_ptr(m, ref_donor) {
+		: ::upb::reffed_ptr<const ::upb::MessageDef>(m, ref_donor) {
       UPB_ASSERT(upbdefs_upb_test_json_TestMessage_MapStringInt32Entry_is(m));
     }
 
@@ -212,7 +212,7 @@ class TestMessage : public ::upb::reffed_ptr<const ::upb::MessageDef> {
   class MapStringMsgEntry : public ::upb::reffed_ptr<const ::upb::MessageDef> {
    public:
     MapStringMsgEntry(const ::upb::MessageDef* m, const void *ref_donor = NULL)
-        : reffed_ptr(m, ref_donor) {
+		: ::upb::reffed_ptr<const ::upb::MessageDef>(m, ref_donor) {
       UPB_ASSERT(upbdefs_upb_test_json_TestMessage_MapStringMsgEntry_is(m));
     }
 
@@ -225,7 +225,7 @@ class TestMessage : public ::upb::reffed_ptr<const ::upb::MessageDef> {
   class MapStringStringEntry : public ::upb::reffed_ptr<const ::upb::MessageDef> {
    public:
     MapStringStringEntry(const ::upb::MessageDef* m, const void *ref_donor = NULL)
-        : reffed_ptr(m, ref_donor) {
+		: ::upb::reffed_ptr<const ::upb::MessageDef>(m, ref_donor) {
       UPB_ASSERT(upbdefs_upb_test_json_TestMessage_MapStringStringEntry_is(m));
     }
 

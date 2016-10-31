@@ -56,6 +56,7 @@ WARNFLAGS=-Wall -Wextra -Wpointer-arith
 WARNFLAGS_CXX=$(WARNFLAGS) -Wno-unused-private-field
 CPPFLAGS=$(INCLUDE) -DNDEBUG $(USER_CPPFLAGS)
 LUA=lua  # 5.1 and 5.2 should both be supported
+LUA=$(shell pwd)/../lua/src/lua  # 5.1 and 5.2 should both be supported
 
 ifneq ($(WITH_JIT), no)
   USE_JIT=true
@@ -207,7 +208,8 @@ ragel:
 # If the user doesn't specify an -O setting, we use -O3 for critical-path
 # code and -Os for the rest.
 ifeq (, $(findstring -O, $(USER_CPPFLAGS)))
-OPT = -O3
+#OPT = -O3
+OPT = -g
 lib/libupb.a : OPT = -Os
 lib/libupb.descriptor.a : OPT = -Os
 obj/upb/pb/compile_decoder.o : OPT = -Os
@@ -317,7 +319,7 @@ tests/testmain.o: tests/testmain.cc
 
 $(C_TESTS): % : %.c tests/testmain.o $$(LIBS)
 	$(E) CC $<
-	$(Q) $(CC) $(OPT) $(CSTD) $(WARNFLAGS) $(CPPFLAGS) $(CFLAGS) -o $@ tests/testmain.o $< $(LIBS)
+	$(Q) $(CC) $(OPT) $(CSTD) $(WARNFLAGS) $(CPPFLAGS) $(CFLAGS) -o $@ tests/testmain.o $< $(LIBS) -lstdc++
 
 $(CC_TESTS): % : %.cc tests/testmain.o $$(LIBS)
 	$(E) CXX $<
@@ -461,7 +463,7 @@ testlua: lua
 	  echo LUA $$test; \
 	  LUA_PATH="third_party/lunit/?.lua;upb/bindings/lua/?.lua" \
 	    LUA_CPATH=upb/bindings/lua/?.so \
-	    lua $$test; \
+	    ${LUA} $$test; \
 	done
 
 clean: clean_lua
@@ -478,6 +480,7 @@ LUA_LIB_DEPS = \
   lib/libupb.pb_pic.a \
   lib/libupb.descriptor_pic.a \
   lib/libupb_pic.a \
+  ../lua/src/liblua.a \
 
 upb/bindings/lua/upb_c.so: upb/bindings/lua/upb.c $(LUA_LIB_DEPS)
 	$(E) CC upb/bindings/lua/upb.c

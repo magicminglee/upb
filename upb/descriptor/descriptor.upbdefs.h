@@ -301,7 +301,7 @@ namespace protobuf {
 class DescriptorProto : public ::upb::reffed_ptr<const ::upb::MessageDef> {
  public:
   DescriptorProto(const ::upb::MessageDef* m, const void *ref_donor = NULL)
-      : reffed_ptr(m, ref_donor) {
+	  : ::upb::reffed_ptr<const ::upb::MessageDef>(m, ref_donor) {
     UPB_ASSERT(upbdefs_google_protobuf_DescriptorProto_is(m));
   }
 
@@ -313,7 +313,7 @@ class DescriptorProto : public ::upb::reffed_ptr<const ::upb::MessageDef> {
   class ExtensionRange : public ::upb::reffed_ptr<const ::upb::MessageDef> {
    public:
     ExtensionRange(const ::upb::MessageDef* m, const void *ref_donor = NULL)
-        : reffed_ptr(m, ref_donor) {
+		: ::upb::reffed_ptr<const ::upb::MessageDef>(m, ref_donor) {
       UPB_ASSERT(upbdefs_google_protobuf_DescriptorProto_ExtensionRange_is(m));
     }
 
@@ -326,7 +326,7 @@ class DescriptorProto : public ::upb::reffed_ptr<const ::upb::MessageDef> {
   class ReservedRange : public ::upb::reffed_ptr<const ::upb::MessageDef> {
    public:
     ReservedRange(const ::upb::MessageDef* m, const void *ref_donor = NULL)
-        : reffed_ptr(m, ref_donor) {
+		: ::upb::reffed_ptr<const ::upb::MessageDef>(m, ref_donor) {
       UPB_ASSERT(upbdefs_google_protobuf_DescriptorProto_ReservedRange_is(m));
     }
 
@@ -340,7 +340,7 @@ class DescriptorProto : public ::upb::reffed_ptr<const ::upb::MessageDef> {
 class EnumDescriptorProto : public ::upb::reffed_ptr<const ::upb::MessageDef> {
  public:
   EnumDescriptorProto(const ::upb::MessageDef* m, const void *ref_donor = NULL)
-      : reffed_ptr(m, ref_donor) {
+	  : ::upb::reffed_ptr<const ::upb::MessageDef>(m, ref_donor) {
     UPB_ASSERT(upbdefs_google_protobuf_EnumDescriptorProto_is(m));
   }
 
@@ -353,7 +353,7 @@ class EnumDescriptorProto : public ::upb::reffed_ptr<const ::upb::MessageDef> {
 class EnumOptions : public ::upb::reffed_ptr<const ::upb::MessageDef> {
  public:
   EnumOptions(const ::upb::MessageDef* m, const void *ref_donor = NULL)
-      : reffed_ptr(m, ref_donor) {
+	  : ::upb::reffed_ptr<const ::upb::MessageDef>(m, ref_donor) {
     UPB_ASSERT(upbdefs_google_protobuf_EnumOptions_is(m));
   }
 
@@ -366,7 +366,7 @@ class EnumOptions : public ::upb::reffed_ptr<const ::upb::MessageDef> {
 class EnumValueDescriptorProto : public ::upb::reffed_ptr<const ::upb::MessageDef> {
  public:
   EnumValueDescriptorProto(const ::upb::MessageDef* m, const void *ref_donor = NULL)
-      : reffed_ptr(m, ref_donor) {
+	  : ::upb::reffed_ptr<const ::upb::MessageDef>(m, ref_donor) {
     UPB_ASSERT(upbdefs_google_protobuf_EnumValueDescriptorProto_is(m));
   }
 
@@ -379,7 +379,7 @@ class EnumValueDescriptorProto : public ::upb::reffed_ptr<const ::upb::MessageDe
 class EnumValueOptions : public ::upb::reffed_ptr<const ::upb::MessageDef> {
  public:
   EnumValueOptions(const ::upb::MessageDef* m, const void *ref_donor = NULL)
-      : reffed_ptr(m, ref_donor) {
+	  : ::upb::reffed_ptr<const ::upb::MessageDef>(m, ref_donor) {
     UPB_ASSERT(upbdefs_google_protobuf_EnumValueOptions_is(m));
   }
 
@@ -392,7 +392,7 @@ class EnumValueOptions : public ::upb::reffed_ptr<const ::upb::MessageDef> {
 class FieldDescriptorProto : public ::upb::reffed_ptr<const ::upb::MessageDef> {
  public:
   FieldDescriptorProto(const ::upb::MessageDef* m, const void *ref_donor = NULL)
-      : reffed_ptr(m, ref_donor) {
+	  : ::upb::reffed_ptr<const ::upb::MessageDef>(m, ref_donor) {
     UPB_ASSERT(upbdefs_google_protobuf_FieldDescriptorProto_is(m));
   }
 
@@ -404,7 +404,7 @@ class FieldDescriptorProto : public ::upb::reffed_ptr<const ::upb::MessageDef> {
   class Label : public ::upb::reffed_ptr<const ::upb::EnumDef> {
    public:
     Label(const ::upb::EnumDef* e, const void *ref_donor = NULL)
-        : reffed_ptr(e, ref_donor) {
+		: ::upb::reffed_ptr<const ::upb::EnumDef>(e, ref_donor) {
       UPB_ASSERT(upbdefs_google_protobuf_FieldDescriptorProto_Label_is(e));
     }
     static Label get() {
@@ -416,7 +416,7 @@ class FieldDescriptorProto : public ::upb::reffed_ptr<const ::upb::MessageDef> {
   class Type : public ::upb::reffed_ptr<const ::upb::EnumDef> {
    public:
     Type(const ::upb::EnumDef* e, const void *ref_donor = NULL)
-        : reffed_ptr(e, ref_donor) {
+		: ::upb::reffed_ptr<const ::upb::EnumDef>(e, ref_donor) {
       UPB_ASSERT(upbdefs_google_protobuf_FieldDescriptorProto_Type_is(e));
     }
     static Type get() {
@@ -429,7 +429,7 @@ class FieldDescriptorProto : public ::upb::reffed_ptr<const ::upb::MessageDef> {
 class FieldOptions : public ::upb::reffed_ptr<const ::upb::MessageDef> {
  public:
   FieldOptions(const ::upb::MessageDef* m, const void *ref_donor = NULL)
-      : reffed_ptr(m, ref_donor) {
+	  : ::upb::reffed_ptr<const ::upb::MessageDef>(m, ref_donor) {
     UPB_ASSERT(upbdefs_google_protobuf_FieldOptions_is(m));
   }
 
@@ -441,7 +441,7 @@ class FieldOptions : public ::upb::reffed_ptr<const ::upb::MessageDef> {
   class CType : public ::upb::reffed_ptr<const ::upb::EnumDef> {
    public:
     CType(const ::upb::EnumDef* e, const void *ref_donor = NULL)
-        : reffed_ptr(e, ref_donor) {
+	  : ::upb::reffed_ptr<const ::upb::EnumDef>(e, ref_donor) {
       UPB_ASSERT(upbdefs_google_protobuf_FieldOptions_CType_is(e));
     }
     static CType get() {
@@ -453,7 +453,7 @@ class FieldOptions : public ::upb::reffed_ptr<const ::upb::MessageDef> {
   class JSType : public ::upb::reffed_ptr<const ::upb::EnumDef> {
    public:
     JSType(const ::upb::EnumDef* e, const void *ref_donor = NULL)
-        : reffed_ptr(e, ref_donor) {
+	  : ::upb::reffed_ptr<const ::upb::EnumDef>(e, ref_donor) {
       UPB_ASSERT(upbdefs_google_protobuf_FieldOptions_JSType_is(e));
     }
     static JSType get() {
@@ -466,7 +466,7 @@ class FieldOptions : public ::upb::reffed_ptr<const ::upb::MessageDef> {
 class FileDescriptorProto : public ::upb::reffed_ptr<const ::upb::MessageDef> {
  public:
   FileDescriptorProto(const ::upb::MessageDef* m, const void *ref_donor = NULL)
-      : reffed_ptr(m, ref_donor) {
+	  : ::upb::reffed_ptr<const ::upb::MessageDef>(m, ref_donor) {
     UPB_ASSERT(upbdefs_google_protobuf_FileDescriptorProto_is(m));
   }
 
@@ -479,7 +479,7 @@ class FileDescriptorProto : public ::upb::reffed_ptr<const ::upb::MessageDef> {
 class FileDescriptorSet : public ::upb::reffed_ptr<const ::upb::MessageDef> {
  public:
   FileDescriptorSet(const ::upb::MessageDef* m, const void *ref_donor = NULL)
-      : reffed_ptr(m, ref_donor) {
+	  : ::upb::reffed_ptr<const ::upb::MessageDef>(m, ref_donor) {
     UPB_ASSERT(upbdefs_google_protobuf_FileDescriptorSet_is(m));
   }
 
@@ -492,7 +492,7 @@ class FileDescriptorSet : public ::upb::reffed_ptr<const ::upb::MessageDef> {
 class FileOptions : public ::upb::reffed_ptr<const ::upb::MessageDef> {
  public:
   FileOptions(const ::upb::MessageDef* m, const void *ref_donor = NULL)
-      : reffed_ptr(m, ref_donor) {
+	  : ::upb::reffed_ptr<const ::upb::MessageDef>(m, ref_donor) {
     UPB_ASSERT(upbdefs_google_protobuf_FileOptions_is(m));
   }
 
@@ -504,7 +504,7 @@ class FileOptions : public ::upb::reffed_ptr<const ::upb::MessageDef> {
   class OptimizeMode : public ::upb::reffed_ptr<const ::upb::EnumDef> {
    public:
     OptimizeMode(const ::upb::EnumDef* e, const void *ref_donor = NULL)
-        : reffed_ptr(e, ref_donor) {
+		: ::upb::reffed_ptr<const ::upb::EnumDef>(e, ref_donor) {
       UPB_ASSERT(upbdefs_google_protobuf_FileOptions_OptimizeMode_is(e));
     }
     static OptimizeMode get() {
@@ -517,7 +517,7 @@ class FileOptions : public ::upb::reffed_ptr<const ::upb::MessageDef> {
 class MessageOptions : public ::upb::reffed_ptr<const ::upb::MessageDef> {
  public:
   MessageOptions(const ::upb::MessageDef* m, const void *ref_donor = NULL)
-      : reffed_ptr(m, ref_donor) {
+	  : ::upb::reffed_ptr<const ::upb::MessageDef>(m, ref_donor) {
     UPB_ASSERT(upbdefs_google_protobuf_MessageOptions_is(m));
   }
 
@@ -530,7 +530,7 @@ class MessageOptions : public ::upb::reffed_ptr<const ::upb::MessageDef> {
 class MethodDescriptorProto : public ::upb::reffed_ptr<const ::upb::MessageDef> {
  public:
   MethodDescriptorProto(const ::upb::MessageDef* m, const void *ref_donor = NULL)
-      : reffed_ptr(m, ref_donor) {
+	  : ::upb::reffed_ptr<const ::upb::MessageDef>(m, ref_donor) {
     UPB_ASSERT(upbdefs_google_protobuf_MethodDescriptorProto_is(m));
   }
 
@@ -543,7 +543,7 @@ class MethodDescriptorProto : public ::upb::reffed_ptr<const ::upb::MessageDef> 
 class MethodOptions : public ::upb::reffed_ptr<const ::upb::MessageDef> {
  public:
   MethodOptions(const ::upb::MessageDef* m, const void *ref_donor = NULL)
-      : reffed_ptr(m, ref_donor) {
+	  : ::upb::reffed_ptr<const ::upb::MessageDef>(m, ref_donor) {
     UPB_ASSERT(upbdefs_google_protobuf_MethodOptions_is(m));
   }
 
@@ -556,7 +556,7 @@ class MethodOptions : public ::upb::reffed_ptr<const ::upb::MessageDef> {
 class OneofDescriptorProto : public ::upb::reffed_ptr<const ::upb::MessageDef> {
  public:
   OneofDescriptorProto(const ::upb::MessageDef* m, const void *ref_donor = NULL)
-      : reffed_ptr(m, ref_donor) {
+	  : ::upb::reffed_ptr<const ::upb::MessageDef>(m, ref_donor) {
     UPB_ASSERT(upbdefs_google_protobuf_OneofDescriptorProto_is(m));
   }
 
@@ -569,7 +569,7 @@ class OneofDescriptorProto : public ::upb::reffed_ptr<const ::upb::MessageDef> {
 class ServiceDescriptorProto : public ::upb::reffed_ptr<const ::upb::MessageDef> {
  public:
   ServiceDescriptorProto(const ::upb::MessageDef* m, const void *ref_donor = NULL)
-      : reffed_ptr(m, ref_donor) {
+	  : ::upb::reffed_ptr<const ::upb::MessageDef>(m, ref_donor) {
     UPB_ASSERT(upbdefs_google_protobuf_ServiceDescriptorProto_is(m));
   }
 
@@ -582,7 +582,7 @@ class ServiceDescriptorProto : public ::upb::reffed_ptr<const ::upb::MessageDef>
 class ServiceOptions : public ::upb::reffed_ptr<const ::upb::MessageDef> {
  public:
   ServiceOptions(const ::upb::MessageDef* m, const void *ref_donor = NULL)
-      : reffed_ptr(m, ref_donor) {
+	  : ::upb::reffed_ptr<const ::upb::MessageDef>(m, ref_donor) {
     UPB_ASSERT(upbdefs_google_protobuf_ServiceOptions_is(m));
   }
 
@@ -595,7 +595,7 @@ class ServiceOptions : public ::upb::reffed_ptr<const ::upb::MessageDef> {
 class SourceCodeInfo : public ::upb::reffed_ptr<const ::upb::MessageDef> {
  public:
   SourceCodeInfo(const ::upb::MessageDef* m, const void *ref_donor = NULL)
-      : reffed_ptr(m, ref_donor) {
+	  : ::upb::reffed_ptr<const ::upb::MessageDef>(m, ref_donor) {
     UPB_ASSERT(upbdefs_google_protobuf_SourceCodeInfo_is(m));
   }
 
@@ -607,7 +607,7 @@ class SourceCodeInfo : public ::upb::reffed_ptr<const ::upb::MessageDef> {
   class Location : public ::upb::reffed_ptr<const ::upb::MessageDef> {
    public:
     Location(const ::upb::MessageDef* m, const void *ref_donor = NULL)
-        : reffed_ptr(m, ref_donor) {
+		: ::upb::reffed_ptr<const ::upb::MessageDef>(m, ref_donor) {
       UPB_ASSERT(upbdefs_google_protobuf_SourceCodeInfo_Location_is(m));
     }
 
@@ -621,7 +621,7 @@ class SourceCodeInfo : public ::upb::reffed_ptr<const ::upb::MessageDef> {
 class UninterpretedOption : public ::upb::reffed_ptr<const ::upb::MessageDef> {
  public:
   UninterpretedOption(const ::upb::MessageDef* m, const void *ref_donor = NULL)
-      : reffed_ptr(m, ref_donor) {
+	  : ::upb::reffed_ptr<const ::upb::MessageDef>(m, ref_donor) {
     UPB_ASSERT(upbdefs_google_protobuf_UninterpretedOption_is(m));
   }
 
@@ -633,7 +633,7 @@ class UninterpretedOption : public ::upb::reffed_ptr<const ::upb::MessageDef> {
   class NamePart : public ::upb::reffed_ptr<const ::upb::MessageDef> {
    public:
     NamePart(const ::upb::MessageDef* m, const void *ref_donor = NULL)
-        : reffed_ptr(m, ref_donor) {
+		: ::upb::reffed_ptr<const ::upb::MessageDef>(m, ref_donor) {
       UPB_ASSERT(upbdefs_google_protobuf_UninterpretedOption_NamePart_is(m));
     }
 
